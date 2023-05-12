@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #112143;
+}
+header {
+
+    /*Aplicar uma imagem de fundo com
+    o comando background-image */
+    background-image: url(./images/portrait-of-a-happy-woman-with-a-flower-in-her-hair-free-vector.jpg);
+    /* Largura do header */
+    width: 100%;
+    /* Altura do header */
+    height: 800px;
+    /* não repetir a imagem de fundo */
+    background-repeat: no-repeat;
+    /*Alterar o tamanho da imagem de fundo */
+    background-size: cover;
+    /*Como alterar a posição do plano de fundo
+        o primeiro elemento é a posição x e o segundo
+        a posição y */
+    background-position: 0 -70px;
+    /*Vamos dispor (display) o conteúdo de forma flexível */
+    display: flex;
+}
+
+header #direita {
+    /*Comando para tamanho de fonte */
+    font-size: 230pt;
+    /* Alteração de fonte*/
+    font-family: Helvetica;
+    /* Para por negrito */
+    font-weight: bold;
+    /* Comando para alterar cor */
+    color: white;
+    /* Comando para mudar rotação */
+    transform: rotate(-90deg);
+    letter-spacing: -25px;
+    flex: 1;
+    height: 800px;
+    margin-right: -500px;
+
+}
+header #esquerda {
+    flex: 5;
+    padding-left: 800px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 37pt;
+    font-weight: bold;
+    padding-top: 120px;
+    text-shadow: 5px 5px 15px black;
+    display: block;
+}
+
+header #esquerda span {
+    font-size: 33pt;
+    font-weight: lighter;
+}
+
+header img {
+    width: 19px;
+    height: 19px;
+
+}
+
+header #esquerda #fb, header #esquerda #ig {
+    font-size: 17pt;
+}
+
+header #esquerda #endereco{
+    font-weight: lighter;
+    font-size: 10pt;
+    line-height: 10pt;
+    display: block;
+}
+
+header a {
+    text-decoration: underline;
+    color: white;
+}
+
+header #qr {
+    width: 200px;
+    height: 200px;
+   
+
+}
