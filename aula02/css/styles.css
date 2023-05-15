@@ -4,7 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #112143;
+    background-color: white;
+}
+html{
+    overflow-x: hidden;
 }
 header {
 
@@ -25,11 +28,12 @@ header {
     background-position: 0 -70px;
     /*Vamos dispor (display) o conteúdo de forma flexível */
     display: flex;
+    background-color: #112143;
 }
 
 header #direita {
     /*Comando para tamanho de fonte */
-    font-size: 230pt;
+    font-size: 225pt;
     /* Alteração de fonte*/
     font-family: Helvetica;
     /* Para por negrito */
@@ -40,9 +44,11 @@ header #direita {
     transform: rotate(-90deg);
     letter-spacing: -25px;
     flex: 1;
-    height: 800px;
-    margin-right: -500px;
-
+    height: 300px;
+    margin-top: 260px;
+    margin-left: -25px;
+    background-color: #112143;
+    padding: 0 0;
 }
 header #esquerda {
     flex: 5;
@@ -88,4 +94,90 @@ header #qr {
     height: 200px;
    
 
+}
+
+main #programacao {
+    display: flex;
+}
+
+main #programacao div {
+    flex: 1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 26px;
+    padding: 15px;
+}
+
+main #programacao div h4 {
+    color: orangered;
+}
+
+main #programacao div h3 {
+    font-size: 20pt;
+    color: darkblue;
+}
+
+main #programacao p {
+    color: darkblue;
+}
+
+main #programacao span {
+    color: orangered;
+    margin: 0 7px;
+}
+
+main hr {
+    display: block;
+    border-color: orangered;
+    width: 55%;
+    margin: 1px 0;
+    border-width: 1px;
+}
+
+main #cursos {
+    display: flex;
+    font-family: Verdana;
+}
+
+main div #beleza {
+    color: orangered;
+    padding-left: 20px;
+}
+
+footer #rodape {
+    padding-top: 5px;
+    padding-left: 40px;
+    font-family: Verdana;
+    display: flex;
+}
+
+footer #rodape h3 {
+    color: darkblue;
+}
+
+footer hr {
+    
+    width: 85%;
+    border-color: orangered;
+    border-width: 1px;
+    margin: 30px 0;
+    margin-left: auto;   
+}
+
+footer #rodape div {
+    flex: 1;
+}
+
+footer div h5 {
+    padding-top: 20px;
+    color: darkblue;
+}
+
+footer #rodape img{
+    padding-top: 120px;
+    padding-left: 620px;
+}
+
+footer #rodape span {
+    margin-bottom: 150px;
+    margin-left: 640px;
 }
