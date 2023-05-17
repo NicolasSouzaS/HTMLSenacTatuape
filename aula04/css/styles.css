@@ -1,0 +1,156 @@
+* {
+ /*Zerar as margens */
+ margin: 0; /*margem externa zerada*/
+ padding: 0; /*margem interna zerada*/
+ box-sizing: border-box;
+}
+
+section{
+    margin:20px auto; /*alinha as seções ao centro*/
+    width: 40%; /* largura reduzida para 70% da tela*/
+    border: 1px solid;
+    padding: 10px;
+    font-family: Verdana;
+}
+#login label{
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12pt;
+    margin: 5px 0;
+}
+#login input, #login select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px; /*Margin inferior*/
+    font-family: Verdana;
+    font-size: 12pt;
+    /* Código para mudar para negrito | normal as letras */
+    font-weight:lighter;
+    /* Código para mudar a cor da borda da input ao clicar | foco */
+    outline-color: crimson; 
+    /* Código para arrendodar as bordas */
+    border-radius: 10px;
+    /* Mudar o fundo */
+    background-color: azure; 
+    border: 0;
+}
+
+#dadospessoais label {
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 12pt;
+    display: block;
+    padding: 5px;
+}
+
+#dadospessoais input[type=text]{
+    width: 100%;
+    padding: 6px;
+    font-family: Verdana;
+    font-size: 12pt;
+    margin-bottom: 10px;
+    border: 0;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+#dadospessoais input[type=date]{
+    padding: 9px;
+    font-family: Verdana;
+    outline: none;
+    border-radius: 10px;
+    font-size: 12pt;
+}
+
+#dadospessoais input[type="date"]:valid{
+    background-color: cadetblue;
+}
+
+#endereco input, select{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 0;
+    background-color: azure;
+    outline: none;
+    padding: 10px;
+    font-family: Verdana;
+}
+
+#contato {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#contato input{
+    padding: 2px;
+}
+
+#interesse {
+    padding: 20px 30px 50px 30px;
+    text-align: center;
+    
+    
+    border-radius: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 11pt;
+}
+
+#interesse textarea{
+    resize: none; /*Não deixa a caixa redimensionar*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 50%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+
+}
+
+#interesse input[type=checkbox]{
+    margin-left: 7px;
+}
+
+#interesse textarea::-webkit-scrollbar{
+    background-color: azure;
+}
+
+#interesse textarea::-webkit-scrollbar-button{
+    padding: 2px 2px;
+    background-color: aqua;
+}
+
+#interesse textarea::-webkit-scrollbar-thumb{
+    background-color: aquamarine;
+}
+
+
+header{
+    padding: 50px 0;
+    background-color: darkcyan;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+
+header h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-shadow: 3px 5px 5px black;
+    color: white
+}
+
+form{
+    margin-top: 165px;
+}
+
+form input[type=submit] {
+    padding: 10px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    background-color: darkblue;
+    color: white;
+    margin-bottom: 50px;
+    display: block;
+}
