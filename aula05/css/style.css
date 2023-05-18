@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@600&display=swap');
 *{
     margin:0;
     padding:0;
@@ -15,10 +15,7 @@ main{
     height: 600px;
 }
 
-#formulario{
-    display: flex;
 
-}
 
 #img img{
     justify-content: flex-end;
@@ -28,12 +25,12 @@ main{
 
 #login input[type=submit] {
     font-size: 8pt;
-    margin-left: 80px;
+    margin-left: 95px;
     font-family: Segoe Ui;
     color: white;
     background-color: black;
-    margin-top: 20px;
-    width: 300px;
+    margin-top: 15px;
+    width: 280px;
     height: 50px;
     border-radius: 40px;
 }
@@ -43,21 +40,26 @@ main{
 }
 
 #login input[type=email]{
-    margin-left: 120px;
-    margin-top: 230px;
+    padding-left: 10px;
+    margin-left: 90px;
+    margin-top: 20px;
+    border: 1px solid rgb(229, 235, 235);
+    background-color: ghostwhite;
     border-radius: 5px;
     height: 40px;
-    width: 220px;
+    width: 290px;
     font-size: 7pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #login input[type=password]{
+    padding-left: 10px;
     margin-top: 17px;
-    margin-left: 120px;
-    width: 220px;
+    margin-left: 90px;
+    border: 1px solid rgb(229, 235, 235);
+    background-color: ghostwhite;
+    width: 290px;
     height: 40px;
-    width: 220px;
     font-size: 7pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 5px;
@@ -70,5 +72,125 @@ main{
 }
 
 #login h1{
+    font-family: 'Outfit', sans-serif;
+    margin-left: 95px;
+    margin-top: 22px;
+    font-size: 55pt;
+}
+
+#Welcome{
     margin-left: 120px;
+    font-size: 8pt;
+    font-family: Verdana;
+    color: gray;
+}
+
+#login img{
+    height: 18px;
+    width: 18px;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+#haze {
+    display: flex;
+}
+
+#rei{
+    width: 65px;
+    background-color: ghostwhite;
+    border: 1px solid rgb(229, 235, 235);
+    border-radius: 20px;
+    margin-left: 300px;
+    margin-top: 21px;
+    display: flex;
+}
+
+#rei p{
+    font-size: 9pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+#google{
+    height: 50px;
+    width: 290px;
+    margin-top: 25px;
+    margin-left: 90px;
+    border: solid 1px rgb(197, 197, 197);
+    border-radius: 8px;
+    
+}
+
+#google img{
+    margin-top: 16px;
+    margin-left: 85px;
+    width: 12px;
+    height: 12px;
+}
+
+#txtemail ::placeholder{
+    margin-left: 500px;
+}
+
+#pass {
+    margin-top: 10px;
+    margin-left: 295px;
+    font-size: 8pt;
+    color: rgb(74,147,205);
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+
+}
+
+#hr {
+    font-weight: lighter;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    margin-left: 170px;
+    font-size: 8pt;
+    margin-top: 20px;
+    color: gray;
+}
+
+#sign {
+    font-family: 'Outfit', sans-serif;
+    font-weight: lighter;
+    font-size: 9pt;
+    margin-left: 140px;
+    margin-top: 20px;
+}
+
+main{
+    display: flex;
+
+}
+
+form{
+    flex: 1;
+
+}
+
+#img{
+    flex: 1;
+}
+
+#img{
+   background-image: url(../img/astronauta.jpg);
+   background-position: 0 ;
+   background-size: cover;
+   border-top-right-radius: 50px;
+   border-bottom-right-radius: 50px;
+}
+
+#login input[type=submit]:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+#google:hover{
+    background-color: rgb(52,58,64);
 }
