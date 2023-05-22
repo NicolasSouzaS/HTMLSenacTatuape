@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+} 
+
+
+form{
+    width: 30%;
+    margin: 10% auto;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 40px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 45pt;
+    text-align: right;
+    outline-color: gray;
+}
+
+button{
+    width: 24.2%;
+    height: 100px;
+    font-size: 25pt;
+    cursor: pointer;
+}
+
+button:hover{
+    color: white;
+    background-color:#111;
+}
+
+button:active{
+    background-color: #111;
+    color: white;
+}
