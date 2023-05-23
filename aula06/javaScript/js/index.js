@@ -200,5 +200,12 @@ function igual(){
         resultado = valor1 / parseFloat(display.value);
         display.value = resultado;
     }
+    else if(operador == "%"){
+        parseFloat(display.value) / 100
+        resultado = valor1 * (display.value)
+        display.value = resultado;
+        parseFloat(display.value);
+        
+    }
     
 }
