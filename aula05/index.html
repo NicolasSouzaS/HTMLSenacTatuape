@@ -11,7 +11,9 @@
 <body>
     
     <main id="formulario">
-        <form action="">
+        <!-- O comando return false é utilizado no onsubmit para evitar o que
+        o forumulário sejá enviado -->
+        <form onsubmit="return false" method="post">
         <div id="login">
             <div id="haze">
             <h2>HAZE.</h2>
@@ -26,16 +28,19 @@
             <p id="Welcome">Welcome to Haze. Community Dashboard</p>
             <div id="google">
               <a href="https://google.com"><img src="img/google.png" alt=""></a>  <span style="font-size: 8pt; font-family: 'Lucida Sans', sans-serif; margin-top: 200px;"> 
-            <a style="text-decoration: none; color: black;" href="#">Log in with Google</a> </span>
+            <a style="text-decoration: none;" href="#">Log in with Google</a> </span>
             </div>
             <div id="hr">
                      <p>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯      or        ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</p>    
             </div>
-            <input type="email" name="txtemail" id="txtemail" placeholder="Your email">
+            <input type="text" name="txtusuario" id="txtusuario" placeholder="Your User">
             <input type="password" name="txtsenha" id="txtsenha" placeholder="Password">
             <p id="pass"><a style="text-decoration: none;" href="#">Forgot password?</a> </p>
-            <input type="submit" value="Log In">
-            <p id="sign">Don't have an account? <span style="color:rgb(74,147,205);"> <a style="text-decoration: none;" href="#">Sign up</a>  </span></p>
+
+            <input type="submit" id="btnLogin" value="Log In">
+
+
+            <p id="sign">Don't have an account? <span style="color:rgb(74,147,205);"> <a id="register" style="text-decoration: none;" href="#">Sign up</a>  </span></p>
             
             
         </div>
@@ -45,6 +50,24 @@
         <div id="img">
 
         </div>
+
+
+        <div id="shadow">
+            <div>
+                <a id="fechar" href="#"> &times; </a>
+                <form onsubmit="return false">
+                    <input type="text" id="txtUser" placeholder="Nome Usuário">
+                    <input type="password" id="txtPass" placeholder="Senha">
+                    <input type="email" id="txtemail" placeholder="E-mail">
+                    <input type="file" id="txtfoto" placeholder="Foto do Usuário">
+                    <input type="submit" value="Cadastrar">
+                </form>
+            </div>
+        </div>
+
     </main>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>
