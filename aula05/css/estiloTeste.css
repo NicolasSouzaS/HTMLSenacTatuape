@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&family=Roboto+Condensed&family=Rubik&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ccc;
+}
+
+main,header{
+    background-color: #fff;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+header h1{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20pt;
+    font-weight: lighter;
+    padding: 10px;
+}
+
+.div_user{
+    display: flex;
+    box-shadow: 0px 0px 20px silver;
+    margin: 5px auto 10px auto;
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    transition: ease 0.5s;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div_user img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.div_user h2{
+    font-family: 'Rubik', sans-serif;
+    font-weight: lighter;
+    color: #333;
+}
+
+.div_user h3{
+    font-family: 'Rubik', sans-serif;
+    font-weight: lighter;
+    color: #333;
+}
+
+.div_user:hover{
+    transform: scale(1.1);
+}
+
