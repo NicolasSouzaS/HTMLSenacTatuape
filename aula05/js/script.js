@@ -4,6 +4,7 @@ const txtuser = document.getElementById("txtusuario");
 const txtpass = document.getElementById("txtsenha");
 let autenticado;
 let token;
+let key;
 
 btn.onclick= ()=>{
     // Validação dos campos usuario e senha
@@ -33,6 +34,8 @@ btn.onclick= ()=>{
             token = dado.token;
             txtusuario.value="";
             txtsenha.value="";
+            // Mudar de tela
+            window.location.href=`list.html?key=${token}`;
         }
         else{
             return alert("Usuário ou senha incorreto. Tente novamente")
@@ -108,6 +111,9 @@ btncad.onclick = ()=> {
 
 
 function carregarDados(){
+
+key = window.location.search.substring(5,window.location.search.length);
+
 const estrutura = document.getElementById("estrutura");
 
 fetch("http://127.0.0.1:4000/users/list")
@@ -119,7 +125,7 @@ fetch("http://127.0.0.1:4000/users/list")
         divUser.innerHTML = `<img src="img/avatar.png">
         <h2>${item.nomeUsuario}</h2>
         <h3>${item.email}</h3>
-        <a href="#" onclick="editar('${item.idusuario}','${item.nomeUsuario}')">
+        <a href="#" onclick="editar('${item.idusuario}','${item.nomeUsuario}','${item.email}','${item.foto}')">
             <img src="img/botao-editar.png">
         </a>
         `;
@@ -128,6 +134,89 @@ fetch("http://127.0.0.1:4000/users/list")
 }).catch((error)=>console.log(`Erro ao executar a API -> ${error}`));
 };
 
-function editar(id,usuario){
-    alert(`o id é ${id} e o nome é ${usuario}`);
+function editar(id,usuario, email,foto){
+    
+    // Fazer uma referência ao body da página HTML
+    const body = document.body;
+    const divShadow = document.createElement("div");
+    const divWhite = document.createElement("div");
+    const form = document.createElement("form");
+    const inputId = document.createElement("input");
+    const inputUser = document.createElement("input");
+    const inputPass = document.createElement("input");
+    const inputConfirm = document.createElement("input");
+    const inputEmail = document.createElement("input");
+    const inputFile = document.createElement("input");
+    const inputSub = document.createElement("input");
+
+    // Aplicando atributos para os elementos
+    divShadow.setAttribute("id","divShadow");
+    divWhite.setAttribute("id","divWhite");
+    // Atributo para não enviar o formulário. O envio será feito
+    // via JavaScript.
+    form.setAttribute("onsubmit","return false;")
+
+    // Aplicando atributos para o Id, os atributos são:
+    // type, placeholder, disabled
+    inputId.setAttribute("type","text");
+    inputId.setAttribute("placeholder",`Id ${id}`);
+    inputId.setAttribute("disabled","true");
+
+
+    // Aplicando atributos ao user, os atributos são: type, placeholder
+    // disabled
+    inputUser.setAttribute("type","text");
+    inputUser.setAttribute("placeholder",`Usuário: ${usuario}`);
+    inputUser.setAttribute("disabled","true");
+
+    // Aplicando atributos a pass e confirm
+    inputPass.setAttribute("type","password");
+    inputPass.setAttribute("placeholder","Senha");
+
+    inputConfirm.setAttribute("type","password");
+    inputConfirm.setAttribute("placeholder","Confirme a senha");
+
+    // Atributos para email
+    inputEmail.setAttribute("type","email");
+    inputEmail.setAttribute("placeholder",`${email}`);
+
+    // Atributos para file
+    inputFile.setAttribute("type","file");
+    inputFile.setAttribute("value",`${foto}`);
+
+    inputSub.setAttribute("type","submit");
+    inputSub.setAttribute("value","Atualizar");
+
+
+    inputSub.onclick = ()=>{
+        if(inputConfirm.value != inputPass.value){
+            return alert("Senha de confirmação diferente da senha digitada")
+        }
+        else{
+            fetch(`http://127.0.0.1:4000/users/update/${id}`,{
+                method:`PUT`,
+                headers:{
+                    "accept":"application/json",
+                    "content-type":"application/json",
+                    "token":key
+                },
+                body:JSON.stringify({
+                    senha:inputPass.value,
+                    email:inputEmail.value,
+                    foto:inputFile.value
+                })
+            })
+        }
+    }
+
+    form.appendChild(inputId);
+    form.appendChild(inputUser);
+    form.appendChild(inputPass);
+    form.appendChild(inputConfirm);
+    form.appendChild(inputEmail);
+    form.appendChild(inputFile);
+    form.appendChild(inputSub);
+    divWhite.appendChild(form);
+    divShadow.appendChild(divWhite);
+    body.appendChild(divShadow);
 }
