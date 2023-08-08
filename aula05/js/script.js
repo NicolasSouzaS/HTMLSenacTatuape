@@ -148,6 +148,7 @@ function editar(id,usuario, email,foto){
     const inputEmail = document.createElement("input");
     const inputFile = document.createElement("input");
     const inputSub = document.createElement("input");
+    const caixaInput = document.createElement("div");
 
     // Aplicando atributos para os elementos
     divShadow.setAttribute("id","divShadow");
@@ -216,7 +217,8 @@ function editar(id,usuario, email,foto){
     form.appendChild(inputEmail);
     form.appendChild(inputFile);
     form.appendChild(inputSub);
-    divWhite.appendChild(form);
+    caixaInput.appendChild(form);
     divShadow.appendChild(divWhite);
     body.appendChild(divShadow);
+
 }
